@@ -1,0 +1,51 @@
+{
+  "name": "curl2axios",
+  "version": "0.0.8",
+  "main": "./dist/index.mjs",
+  "author": "4lessandrodev",
+  "license": "MIT",
+  "peerDependencies": {
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "ts-node test/index.spec.ts"
+  },
+  "files": [
+    "./dist/index.js",
+    "./dist/index.d.ts",
+    "./README.md",
+    "./package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4lessandrodev/curl2axios.git"
+  },
+  "bugs": {
+    "url": "https://github.com/4lessandrodev/curl2axios/issues"
+  },
+  "homepage": "https://github.com/4lessandrodev/curl2axios/tree/main/docs",
+  "keywords": [
+    "Curl",
+    "Dev Request",
+    "Axios",
+    "Debug"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./umd": "./dist/index.js"
+  },
+  "description": "This lib provide a interceptor to generate a curl from axios request",
+  "types": "./dist/index.d.js",
+  "module": "./dist/index.js",
+  "readme": "./README.md"
+}
