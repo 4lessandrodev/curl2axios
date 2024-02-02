@@ -1,6 +1,6 @@
 {
   "name": "curl2axios",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/index.mjs",
   "author": "4lessandrodev",
   "license": "MIT",

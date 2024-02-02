@@ -1,8 +1,8 @@
-# axios-curl
+# curl2axios
 
 ## Overview
 
-axios2curl is a lightweight Axios interceptor for generating cURL commands from Axios requests. It simplifies the process of converting your Axios requests into cURL commands for easier debugging and sharing.
+curl2axios is a lightweight Axios interceptor for generating cURL commands from Axios requests. It simplifies the process of converting your Axios requests into cURL commands for easier debugging and sharing.
 
 ---
 
@@ -12,7 +12,7 @@ Install the library using npm or yarn:
 
 ```sh
 
-npm install axios2curl
+npm install curl2axios
 
 
 ```
@@ -21,7 +21,7 @@ OR
 
 ```sh
 
-yarn add axios2curl
+yarn add curl2axios
 
 ```
 
@@ -34,7 +34,7 @@ Basic Usage
 ```js
 
 import axios from 'axios';
-import { curlInterceptor } from 'axios2curl';
+import { curlInterceptor } from 'curl2axios';
 
 axios.interceptors.request.use(curlInterceptor);
 
@@ -62,7 +62,7 @@ You can also provide a custom callback function to handle the generated cURL com
 ```js
 
 import axios from 'axios';
-import { curlInterceptor } from 'axios2curl';
+import { curlInterceptor } from 'curl2axios';
 
 const myCallback = (curl: string) => console.log(curl);
 
@@ -93,7 +93,7 @@ axios.get('https://api.com/item/1');
 ```js
 
 import axios from 'axios';
-import { bindCurl } from 'axios2curl';
+import { bindCurl } from 'curl2axios';
 
 const instance = bindCurl(axios.create({ baseURL: 'https://pokeapi.co/api/v2' }));
 
