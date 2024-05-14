@@ -40,7 +40,12 @@ function generateCurlCommand(options) {
                 curlCommand += ` -H '${key}: ${value}'`;
             }
             else {
-                curlCommand += ` -H '${key}: '`;
+                if ((key === null || key === void 0 ? void 0 : key.toLowerCase()) === 'content-type') {
+                    curlCommand += ` -H '${key}: application/json'`;
+                }
+                else {
+                    curlCommand += ` -H '${key}: '`;
+                }
             }
         }
     }

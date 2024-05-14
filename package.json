@@ -1,14 +1,16 @@
 {
   "name": "curl2axios",
-  "version": "0.0.2",
-  "main": "./dist/index.mjs",
+  "version": "0.0.3",
+  "main": "./dist/index.js",
   "author": "4lessandrodev",
   "license": "MIT",
   "peerDependencies": {
     "axios": "^1.6.7"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^20.11.16",
+    "axios": "^1.6.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },

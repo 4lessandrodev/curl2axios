@@ -44,7 +44,11 @@ function generateCurlCommand(options: AxiosRequestConfig): string {
             if (value !== undefined) {
                 curlCommand += ` -H '${key}: ${value}'`;
             } else {
-                curlCommand += ` -H '${key}: '`;
+                if (key?.toLowerCase() === 'content-type') {
+                    curlCommand += ` -H '${key}: application/json'`;
+                } else {
+                    curlCommand += ` -H '${key}: '`;
+                }
             }
         }
     }
@@ -94,7 +98,7 @@ export function curlInterceptor(req: InternalAxiosRequestConfig<any>, callback?:
     return req;
 };
 
-function print (curlCommand: string): void {
+function print(curlCommand: string): void {
     const occurredAt = new Date().toISOString();
     console.log({ occurredAt, curlCommand });
 }
